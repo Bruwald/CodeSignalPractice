@@ -250,12 +250,12 @@ func (r *RecipeManagerImpl) GetRecommendations(timestamp int64, userID UserID, n
 		recipesToRecommend = recipesToRecommend[:n]
 	}
 
-	recipeIDsToRecomend := make([]string, len(recipesToRecommend))
+	recipeIDsToRecommend := make([]string, len(recipesToRecommend))
 	for _, recipeToRecommend := range recipesToRecommend {
-		recipeIDsToRecomend = append(recipeIDsToRecomend, string(recipeToRecommend.ID))
+		recipeIDsToRecommend = append(recipeIDsToRecommend, string(recipeToRecommend.ID))
 	}
 
-	return recipeIDsToRecomend
+	return recipeIDsToRecommend
 }
 
 func (r *RecipeManagerImpl) GetLeaderboard(timestamp int64, n int) []string {
